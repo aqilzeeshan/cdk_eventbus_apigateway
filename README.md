@@ -3,7 +3,7 @@
 * Starts from `aws events put-events --entries file://putevents.json` and goes on to dynamic values e.g.  
 `curl ${ENDPOINT}english --header 'Content-type:application/json' --data '{"UserID":"1234567","LanguageName":"en-us"}'`  
 `curl ${ENDPOINT}french --header 'Content-type:application/json' --data '{"UserID":"abcdefg","LanguageName":"en-gb"}'`
-* Add validations to inputs which are not valid e.g  
+* Add validations to inputs using model so that invalid inputs cannot be provided e.g  
   `# UserID is missing`  
   `curl ${ENDPOINT}english --header 'Content-type:application/json' --data '{"LanguageName":"en-us"}'`  
   `# UserID is the wrong 'type'`  
@@ -12,3 +12,4 @@
   `curl ${ENDPOINT}english --header 'Content-type:application/json' --data '{"UserID":"1234567"}'`  
   `# LanguageName doesn't match the pattern we specified`  
   `curl ${ENDPOINT}french --header 'Content-type:application/json' --data '{"UserID":"abcdefg","LanguageName":"aaa-bb"}'`  
+ * Great for learning use of VTL in API Gatway
