@@ -13,3 +13,4 @@
   `# LanguageName doesn't match the pattern we specified`  
   `curl ${ENDPOINT}french --header 'Content-type:application/json' --data '{"UserID":"abcdefg","LanguageName":"aaa-bb"}'`  
  * Great for learning use of VTL in API Gatway
+ * Check laster to see if WebSocket part is complete https://eventbus-cdk.workshop.aws/en/04-api-gateway-service-integrations/02-websocket-api/websocket-apis.html
